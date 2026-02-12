@@ -135,15 +135,10 @@ export default function ProcessPage() {
               </Stagger>
             </div>
 
-            {/* Visual divider — wireframe grid */}
-            <div className="py-20 md:py-32 relative">
-              <div className="max-w-[500px] mx-auto opacity-40">
-                <WireframeGrid />
+            {/* Visual divider — animated process flow diagram */}
+              <div className="py-20 md:py-32 relative">
+                <ProcessFlowDiagram className="max-w-[900px] mx-auto" />
               </div>
-              <FloatingElement className="absolute top-10 left-[10%] w-[120px] h-[120px] hidden lg:block" speed={12}>
-                <AbstractBlob variant={3} className="w-full h-full opacity-30" />
-              </FloatingElement>
-            </div>
 
             {/* Bottom quote */}
             <div className="py-20 md:py-32 text-center relative">
