@@ -592,6 +592,221 @@ export function HeroVisual({ className = "" }: { className?: string }) {
   );
 }
 
+/* Animated Process Flow Diagram — visualizes the 5-step methodology */
+export function ProcessFlowDiagram({ className = "" }: { className?: string }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const flowSteps = [
+    { label: "Comprendre", icon: "search" },
+    { label: "Recherche", icon: "users" },
+    { label: "Flux", icon: "flow" },
+    { label: "Interface", icon: "design" },
+    { label: "Livraison", icon: "check" },
+  ];
+
+  const nodePositions = [
+    { x: 100, y: 200 },
+    { x: 280, y: 100 },
+    { x: 460, y: 200 },
+    { x: 640, y: 100 },
+    { x: 820, y: 200 },
+  ];
+
+  return (
+    <motion.div
+      ref={ref}
+      className={`relative ${className}`}
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
+      transition={{ duration: 1 }}
+    >
+      {/* Section label */}
+      <motion.div
+        className="text-center mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <span className="text-[#C4A97D] text-xs tracking-[0.35em] uppercase font-medium">
+          Vue d&apos;ensemble
+        </span>
+        <h3 className="font-serif text-2xl md:text-3xl text-foreground mt-3">
+          Du probleme a la solution
+        </h3>
+        <p className="text-[#6B635A] text-sm mt-2 max-w-md mx-auto">
+          Un parcours iteratif ou chaque etape alimente la suivante
+        </p>
+      </motion.div>
+
+      <svg viewBox="0 0 920 320" className="w-full h-auto" preserveAspectRatio="xMidYMid meet">
+        {/* Background grid dots */}
+        {Array.from({ length: 15 }).map((_, row) =>
+          Array.from({ length: 30 }).map((_, col) => (
+            <circle
+              key={`dot-${row}-${col}`}
+              cx={20 + col * 30}
+              cy={20 + row * 20}
+              r={0.6}
+              fill="rgba(196,169,125,0.06)"
+            />
+          ))
+        )}
+
+        {/* Connecting paths between nodes */}
+        {nodePositions.slice(0, -1).map((from, i) => {
+          const to = nodePositions[i + 1];
+          const midX = (from.x + to.x) / 2;
+          const midY = Math.min(from.y, to.y) - 30;
+          return (
+            <motion.path
+              key={`path-${i}`}
+              d={`M ${from.x} ${from.y} Q ${midX} ${midY} ${to.x} ${to.y}`}
+              fill="none"
+              stroke="rgba(196,169,125,0.15)"
+              strokeWidth="1.5"
+              strokeDasharray="6 4"
+              initial={{ pathLength: 0 }}
+              animate={isInView ? { pathLength: 1 } : {}}
+              transition={{ duration: 1, delay: 0.5 + i * 0.25, ease: "easeInOut" }}
+            />
+          );
+        })}
+
+        {/* Animated flowing dots on paths */}
+        {nodePositions.slice(0, -1).map((from, i) => {
+          const to = nodePositions[i + 1];
+          const midX = (from.x + to.x) / 2;
+          const midY = Math.min(from.y, to.y) - 30;
+          return (
+            <motion.circle
+              key={`flow-dot-${i}`}
+              r={3}
+              fill="#C4A97D"
+              opacity={0.6}
+              initial={{ offsetDistance: "0%" }}
+              animate={isInView ? { offsetDistance: "100%" } : {}}
+              transition={{ duration: 2, delay: 1.5 + i * 0.3, repeat: Infinity, repeatDelay: 3, ease: "easeInOut" }}
+            >
+              <animateMotion
+                dur="2.5s"
+                repeatCount="indefinite"
+                begin={`${1.5 + i * 0.5}s`}
+                path={`M ${from.x} ${from.y} Q ${midX} ${midY} ${to.x} ${to.y}`}
+              />
+            </motion.circle>
+          );
+        })}
+
+        {/* Step nodes */}
+        {nodePositions.map((pos, i) => (
+          <motion.g
+            key={`node-${i}`}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 + i * 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+            style={{ transformOrigin: `${pos.x}px ${pos.y}px` }}
+          >
+            {/* Outer pulse ring */}
+            <motion.circle
+              cx={pos.x}
+              cy={pos.y}
+              r={42}
+              fill="none"
+              stroke="rgba(196,169,125,0.08)"
+              strokeWidth="0.5"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={isInView ? { scale: [0.8, 1.1, 1], opacity: [0, 0.5, 0.3] } : {}}
+              transition={{ duration: 2, delay: 1 + i * 0.2, repeat: Infinity, repeatDelay: 4 }}
+              style={{ transformOrigin: `${pos.x}px ${pos.y}px` }}
+            />
+
+            {/* Main circle background */}
+            <circle cx={pos.x} cy={pos.y} r={36} fill="rgba(196,169,125,0.04)" stroke="rgba(196,169,125,0.15)" strokeWidth="1" />
+
+            {/* Inner accent ring */}
+            <circle cx={pos.x} cy={pos.y} r={28} fill="none" stroke="rgba(196,169,125,0.06)" strokeWidth="0.5" />
+
+            {/* Step number */}
+            <text
+              x={pos.x}
+              y={pos.y - 4}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fill="#C4A97D"
+              fontSize="16"
+              fontFamily="serif"
+              fontStyle="italic"
+              opacity="0.8"
+            >
+              {String(i + 1).padStart(2, "0")}
+            </text>
+
+            {/* Step label */}
+            <text
+              x={pos.x}
+              y={pos.y + 14}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fill="rgba(196,169,125,0.5)"
+              fontSize="7"
+              letterSpacing="0.15em"
+              textTransform="uppercase"
+            >
+              {flowSteps[i].label.toUpperCase()}
+            </text>
+          </motion.g>
+        ))}
+
+        {/* Direction arrows between nodes */}
+        {nodePositions.slice(0, -1).map((from, i) => {
+          const to = nodePositions[i + 1];
+          const arrowX = (from.x + to.x) / 2;
+          const arrowY = (from.y + to.y) / 2 - 18;
+          const angle = Math.atan2(to.y - from.y, to.x - from.x) * (180 / Math.PI);
+          return (
+            <motion.g
+              key={`arrow-${i}`}
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 0.4 } : {}}
+              transition={{ duration: 0.5, delay: 1.2 + i * 0.25 }}
+            >
+              <g transform={`translate(${arrowX}, ${arrowY}) rotate(${angle})`}>
+                <polygon points="0,-3 8,0 0,3" fill="#C4A97D" />
+              </g>
+            </motion.g>
+          );
+        })}
+
+        {/* Iterative feedback loop (dashed arc from step 5 back to step 1) */}
+        <motion.path
+          d={`M ${nodePositions[4].x} ${nodePositions[4].y + 40} Q 460 310 ${nodePositions[0].x} ${nodePositions[0].y + 40}`}
+          fill="none"
+          stroke="rgba(196,169,125,0.1)"
+          strokeWidth="1"
+          strokeDasharray="4 6"
+          initial={{ pathLength: 0 }}
+          animate={isInView ? { pathLength: 1 } : {}}
+          transition={{ duration: 1.5, delay: 2.5, ease: "easeInOut" }}
+        />
+        <motion.text
+          x="460"
+          y="305"
+          textAnchor="middle"
+          fill="rgba(196,169,125,0.3)"
+          fontSize="8"
+          letterSpacing="0.2em"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 3 }}
+        >
+          ITERATION
+        </motion.text>
+      </svg>
+    </motion.div>
+  );
+}
+
 /* Stats row with visual flair */
 export function StatBlock({
   number,
