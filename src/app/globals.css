@@ -296,7 +296,7 @@ nextjs-portal { display: none !important; }
   body::before {
     display: none !important;
   }
-  header, footer, .print\\:hidden {
+  header, footer, .print-hidden {
     display: none !important;
   }
 
