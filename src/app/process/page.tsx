@@ -12,11 +12,11 @@ import {
 import { Reveal } from "@/components/reveal";
 import {
   ProcessDiagram,
+  ProcessFlowDiagram,
   FloatingElement,
   AbstractBlob,
   ConcentricCircles,
   DotsPattern,
-  WireframeGrid,
 } from "@/components/visuals";
 
 const steps = [
