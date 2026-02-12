@@ -257,6 +257,44 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* CV CTA Banner */}
+        <section className="py-16 md:py-20 relative overflow-hidden">
+          <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+            <Reveal>
+              <Link
+                href="/cv"
+                className="group relative block p-10 md:p-14 border border-[rgba(196,169,125,0.06)] hover:border-[#C4A97D]/20 transition-all duration-700 overflow-hidden"
+              >
+                {/* Background gradient on hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#C4A97D]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                {/* Corner accents */}
+                <div className="absolute top-0 left-0 w-10 h-10 border-t border-l border-[#C4A97D]/0 group-hover:border-[#C4A97D]/20 transition-colors duration-500" />
+                <div className="absolute bottom-0 right-0 w-10 h-10 border-b border-r border-[#C4A97D]/0 group-hover:border-[#C4A97D]/20 transition-colors duration-500" />
+
+                <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                  <div className="flex items-center gap-5">
+                    <div className="w-12 h-12 border border-[#C4A97D]/15 flex items-center justify-center group-hover:border-[#C4A97D]/30 group-hover:bg-[#C4A97D]/5 transition-all duration-500">
+                      <FileText size={18} className="text-[#C4A97D]/60 group-hover:text-[#C4A97D] transition-colors duration-500" />
+                    </div>
+                    <div>
+                      <h3 className="text-foreground font-serif text-lg md:text-xl group-hover:text-[#C4A97D] transition-colors duration-500">
+                        Consulter mon CV
+                      </h3>
+                      <p className="text-[#6B635A] text-sm mt-1">
+                        Parcours complet, compétences et expériences — format A4
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 text-[#C4A97D]/60 text-xs tracking-[0.2em] uppercase group-hover:text-[#C4A97D] transition-colors duration-500">
+                    <span>Voir le CV</span>
+                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </div>
+              </Link>
+            </Reveal>
+          </div>
+        </section>
+
         {/* Skills */}
         <section className="py-24 md:py-40 relative overflow-hidden">
           <FloatingElement className="absolute bottom-20 left-[5%] w-[200px] h-[200px] hidden lg:block" speed={20} direction="down">
