@@ -258,3 +258,73 @@ nextjs-portal { display: none !important; }
   outline: 2px solid rgba(196,169,125,0.5);
   outline-offset: 2px;
 }
+
+/* ── CV Page styles ── */
+.cv-section-title {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C4A97D;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(196, 169, 125, 0.08);
+}
+
+.cv-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  color: #8A817A;
+  border: 1px solid rgba(196, 169, 125, 0.08);
+  background: rgba(196, 169, 125, 0.02);
+  transition: all 0.3s ease;
+}
+.cv-tag:hover {
+  border-color: rgba(196, 169, 125, 0.2);
+  color: #C4A97D;
+}
+
+/* ── Print styles for CV ── */
+@media print {
+  body {
+    background: #fff !important;
+    color: #1a1a1a !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body::before {
+    display: none !important;
+  }
+  header, footer, .print\\:hidden {
+    display: none !important;
+  }
+
+  .cv-page {
+    max-width: 100% !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: #fff !important;
+  }
+
+  .cv-page * {
+    color: #1a1a1a !important;
+  }
+
+  .cv-section-title {
+    color: #333 !important;
+    border-bottom-color: #ddd !important;
+  }
+
+  .cv-tag {
+    border-color: #ddd !important;
+    color: #444 !important;
+    background: #f5f5f5 !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+}
