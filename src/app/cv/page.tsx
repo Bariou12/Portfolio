@@ -95,7 +95,7 @@ export default function CVPage() {
   return (
     <div className="min-h-screen pt-24 md:pt-32 pb-20">
       {/* Top bar with actions */}
-      <div className="max-w-[900px] mx-auto px-6 mb-8 flex items-center justify-between print:hidden">
+      <div className="max-w-[900px] mx-auto px-6 mb-8 flex items-center justify-between print-hidden">
         <Link
           href="/about"
           className="inline-flex items-center gap-2 text-[#6B635A] text-sm hover:text-[#C4A97D] transition-colors duration-300"
