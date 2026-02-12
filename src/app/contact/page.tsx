@@ -158,4 +158,62 @@ export default function ContactPage() {
                       </Magnetic>
                     </form>
                   </MaskReveal>
-          
+                )}
+              </div>
+
+              {/* Right – Info */}
+              <div className="relative">
+                <Reveal direction="right">
+                  <div className="lg:sticky lg:top-40 space-y-16">
+                    <div>
+                      <span className="text-[10px] tracking-[0.3em] uppercase text-[#C4A97D]/60 font-medium block mb-5">
+                        Email
+                      </span>
+                      <a
+                        href="mailto:bariouboussari@gmail.com"
+                        className="text-foreground text-lg link-underline"
+                      >
+                        bariouboussari@gmail.com
+                      </a>
+                    </div>
+
+                    <div>
+                      <span className="text-[10px] tracking-[0.3em] uppercase text-[#C4A97D]/60 font-medium block mb-5">
+                        Réseaux
+                      </span>
+                      <div className="space-y-4">
+                        <a
+                          href="https://www.linkedin.com/in/bariou-boussari"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-foreground block link-underline w-fit"
+                        >
+                          LinkedIn
+                        </a>
+                        <a
+                          href="https://www.behance.net/bariouboussari"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-foreground block link-underline w-fit"
+                        >
+                          Behance
+                        </a>
+                      </div>
+                    </div>
+
+                    <div>
+                      <span className="text-[10px] tracking-[0.3em] uppercase text-[#C4A97D]/60 font-medium block mb-5">
+                        Localisation
+                      </span>
+                      <p className="text-foreground">Paris, France</p>
+                    </div>
+                  </div>
+                </Reveal>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </PageTransition>
+  );
+}
