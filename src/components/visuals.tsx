@@ -321,7 +321,7 @@ export function ProcessDiagram({ className = "", step = 1 }: { className?: strin
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
-  const icons: Record<number, JSX.Element> = {
+  const icons: Record<number, React.ReactNode> = {
     1: ( // Research — magnifier
       <g>
         <circle cx="90" cy="85" r="25" fill="none" stroke="rgba(196,169,125,0.3)" strokeWidth="1.5" />
