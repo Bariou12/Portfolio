@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { FileText, ArrowRight } from "lucide-react";
 import {
   SplitText,
   MaskReveal,
