@@ -750,8 +750,8 @@ export function ProcessFlowDiagram({ className = "" }: { className?: string }) {
               dominantBaseline="middle"
               fill="rgba(196,169,125,0.5)"
               fontSize="7"
-              letterSpacing="0.15em"
-              textTransform="uppercase"
+                letterSpacing="0.15em"
+                style={{ textTransform: "uppercase" }}
             >
               {flowSteps[i].label.toUpperCase()}
             </text>
