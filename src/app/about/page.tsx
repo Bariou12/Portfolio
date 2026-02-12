@@ -42,16 +42,34 @@ const skills = [
 
 const experience = [
   {
-    role: "Designer UX/UIii",
-    company: "Projets freelance & agence",
-    period: "2021 — Présent",
-    desc: "Direction du design pour des produits digitaux dans la fintech, la santé, la logistique et les médias. Collaboration avec des startups et des entreprises établies sur des solutions complexes centrées utilisateur.",
+    role: "UX Designer",
+    company: "ORTA Service",
+    period: "Juin — Juil 2022",
+    desc: "Expérience professionnelle chez ORTA Service en tant que UX Designer. Contribution à la conception d'interfaces utilisateur et à l'amélioration de l'expérience utilisateur des produits digitaux de l'entreprise.",
   },
   {
-    role: "Designer UX/UI",
-    company: "Collaborations diverses",
-    period: "2019 — 2021",
-    desc: "Construction de compétences fondamentales à travers des projets variés, des plateformes événementielles aux marketplaces NFT, développant une approche structurée de la résolution de problèmes par le design.",
+    role: "UX/UI Designer",
+    company: "Upsilon Consulting",
+    period: "Juil 2022 — Janv 2023",
+    desc: "Expérience professionnelle chez Upsilon Consulting en tant que UX/UI Designer. Conception et optimisation d'interfaces pour des projets clients variés, en appliquant une méthodologie centrée utilisateur.",
+  },
+  {
+    role: "UX/UI Designer",
+    company: "CADRECO",
+    period: "Juin — Sept 2023",
+    desc: "Expérience professionnelle chez CADRECO en tant que UX/UI Designer. Réalisation de maquettes, prototypes et parcours utilisateurs pour améliorer les produits numériques de l'entreprise.",
+  },
+  {
+    role: "UX/UI Designer",
+    company: "SLI Afrika",
+    period: "Déc 2023 — Sept 2024",
+    desc: "Expérience professionnelle chez SLI Afrika en tant que UX/UI Designer. Conception d'expériences digitales adaptées au marché africain, avec un focus sur l'accessibilité et la simplicité d'utilisation.",
+  },
+  {
+    role: "UX/UI Designer",
+    company: "Maono — Togo",
+    period: "Oct 2024 — Nov 2025",
+    desc: "Expérience professionnelle à Maono au Togo en tant que UX/UI Designer. Direction du design d'interfaces utilisateur pour des solutions digitales, en collaborant étroitement avec les équipes produit et développement.",
   },
 ];
 
