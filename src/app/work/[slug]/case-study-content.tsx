@@ -254,6 +254,45 @@ function TrioImages({ images, alts }: { images: string[]; alts: string[] }) {
   );
 }
 
+/* ── Duo phones side by side ── */
+function DuoPhones({ leftSrc, rightSrc, alt }: { leftSrc: string; rightSrc: string; alt: string }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+      className="py-16 md:py-24"
+    >
+      <div className="max-w-[900px] mx-auto px-6 md:px-10">
+        <div className="flex justify-center items-center gap-8 md:gap-16">
+          {/* Phone 1 */}
+          <div className="relative w-[280px] md:w-[320px]">
+             <div className="bg-[#1A1918] border border-[#C4A97D]/8 rounded-[2rem] overflow-hidden p-2 shadow-2xl shadow-black/50">
+                <div className="relative aspect-[9/19] rounded-[1.5rem] overflow-hidden bg-[#0E0D0C]">
+                  <Image src={leftSrc} alt={`${alt} — Screen 1`} fill className="object-cover object-top" sizes="320px" />
+                </div>
+             </div>
+          </div>
+          {/* Phone 2 - slightly offset or just side by side */}
+          <div className="relative w-[280px] md:w-[320px] pt-12 md:pt-24 hidden md:block">
+             <div className="bg-[#1A1918] border border-[#C4A97D]/8 rounded-[2rem] overflow-hidden p-2 shadow-2xl shadow-black/50">
+                <div className="relative aspect-[9/19] rounded-[1.5rem] overflow-hidden bg-[#0E0D0C]">
+                  <Image src={rightSrc} alt={`${alt} — Screen 2`} fill className="object-cover object-top" sizes="320px" />
+                </div>
+             </div>
+          </div>
+        </div>
+        <p className="text-[11px] text-[#6B635A] tracking-[0.15em] uppercase mt-12 text-center">
+          Mobile interface design
+        </p>
+      </div>
+    </motion.div>
+  );
+}
+
 /* ── Desktop + Mobile side by side mockup ── */
 function DeviceDuo({ desktopSrc, mobileSrc, alt }: { desktopSrc: string; mobileSrc: string; alt: string }) {
   const ref = useRef(null);
@@ -488,12 +527,33 @@ export function CaseStudyContent({
   // We interleave visuals between sections for maximum impact
   // Layout: Hero → Vision → Metrics → Info bar → S0 → FullBleed → S1 → BrowserMockup → S2 → DuoImages → S3 → DeviceDuo → Colors/Tools → S4 → TrioImages → S5 → PhoneMockup → S6 → FullBleed → remaining → NextProject
 
-  const visualSlots: { after: number; element: React.ReactNode }[] = [
-    { after: 0, element: <FullBleedImage key="fb1" src={g[1]} alt={`${project.title} — Vue d'ensemble`} caption="Vue d'ensemble du projet" /> },
-    { after: 1, element: <BrowserMockup key="bm1" src={g[2]} alt={`${project.title} — Desktop`} /> },
-    { after: 2, element: <DuoImages key="duo1" images={[g[3], g[4]]} alts={[`${project.title} — Detail 1`, `${project.title} — Detail 2`]} /> },
-    { after: 3, element: <DeviceDuo key="dd1" desktopSrc={g[5]} mobileSrc={g[6]} alt={project.title} /> },
-  ];
+  // Determine if this is a purely mobile project (like Toju)
+  const isMobileProject = project.slug === 'toju' || project.tags.some(t => t.toLowerCase().includes('mobile'));
+
+  const visualSlots: { after: number; element: React.ReactNode }[] = [];
+
+  if (isMobileProject) {
+    // Mobile-first layout
+    visualSlots.push(
+      { after: 0, element: <FullBleedImage key="fb1" src={g[1]} alt={`${project.title} — Vue d'ensemble`} caption="Vue d'ensemble et contexte" /> },
+      { after: 1, element: (
+          <div key="phone-focus" className="py-12 md:py-20 relative overflow-hidden">
+             <PhoneMockup src={g[2]} alt={`${project.title} — Interface Mobile`} />
+          </div>
+        ) 
+      },
+      { after: 2, element: <DuoImages key="duo1" images={[g[3], g[4]]} alts={[`${project.title} — Detail 1`, `${project.title} — Detail 2`]} /> },
+      { after: 3, element: <DuoPhones key="phones1" leftSrc={g[5]} rightSrc={g[6]} alt={`${project.title} — Mobile Screens`} /> }
+    );
+  } else {
+    // Standard Desktop/Web layout
+    visualSlots.push(
+      { after: 0, element: <FullBleedImage key="fb1" src={g[1]} alt={`${project.title} — Vue d'ensemble`} caption="Vue d'ensemble du projet" /> },
+      { after: 1, element: <BrowserMockup key="bm1" src={g[2]} alt={`${project.title} — Desktop`} /> },
+      { after: 2, element: <DuoImages key="duo1" images={[g[3], g[4]]} alts={[`${project.title} — Detail 1`, `${project.title} — Detail 2`]} /> },
+      { after: 3, element: <DeviceDuo key="dd1" desktopSrc={g[5]} mobileSrc={g[6]} alt={project.title} /> }
+    );
+  }
 
   // After tools/colors: trio + phone mockup between remaining sections
   const lateVisuals: { after: number; element: React.ReactNode }[] = [];

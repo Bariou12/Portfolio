@@ -205,7 +205,7 @@ export default function ContactPage() {
                       <span className="text-[10px] tracking-[0.3em] uppercase text-[#C4A97D]/60 font-medium block mb-5">
                         Localisation
                       </span>
-                      <p className="text-foreground">Paris, France</p>
+                      <p className="text-foreground">Lomé, TOGO</p>
                     </div>
                   </div>
                 </Reveal>
