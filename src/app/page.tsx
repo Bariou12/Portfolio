@@ -145,7 +145,7 @@ function HeroSection() {
               <p className="text-lg md:text-xl text-[#6B635A] max-w-md leading-relaxed">
                 Projets, processus et réflexion produit.
                 <br />
-                <span className="text-[#8A817A]">Basé à Paris.</span>
+                <span className="text-[#8A817A]">Basé à Lomé.</span>
               </p>
           </MaskReveal>
 

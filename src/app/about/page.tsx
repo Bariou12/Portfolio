@@ -22,6 +22,7 @@ import {
   WireframeMockup,
   DesktopWireframe,
 } from "@/components/visuals";
+import Image from "next/image";
 
 const skills = [
   {
@@ -118,14 +119,8 @@ export default function AboutPage() {
               <Reveal direction="left">
                 <div className="relative">
                   <div className="relative aspect-[3/4] overflow-hidden bg-[#111110]">
-                    {/* Placeholder with monogram */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="relative">
-                        <span className="text-[120px] md:text-[160px] font-serif text-[#C4A97D]/[0.05] leading-none select-none">
-                          BB
-                        </span>
-                      </div>
-                    </div>
+                    {/* Placeholder with profile image */}
+                    <img src="/images/bariou.png" alt="Bariou Boussari" className="w-full h-full object-cover" />
                     {/* Grid overlay */}
                     <div className="absolute inset-0 grid-pattern opacity-30" />
                     {/* Border */}
@@ -175,7 +170,7 @@ export default function AboutPage() {
                     <div className="w-[1px] h-10 bg-[rgba(196,169,125,0.08)]" />
                     <StatBlock number="5+" label="Secteurs" />
                     <div className="w-[1px] h-10 bg-[rgba(196,169,125,0.08)]" />
-                    <StatBlock number="Paris" label="Basé" />
+                    <StatBlock number="Lomé" label="Basé" />
                   </div>
                 </MaskReveal>
               </div>

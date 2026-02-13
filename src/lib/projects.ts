@@ -43,9 +43,9 @@ export const projects: Project[] = [
     vision:
       "Concevoir une expérience digitale capable de donner envie de venir avant même d'avoir franchi les portes du lieu.",
     thumbnail:
-      "/images/projects/aleaPark/01.png",
+      "/images/projects/aleapark/01.png",
     gallery: [
-      "/images/projects/aleaPark/01.png",
+      "/images/projects/aleapark/01.png",
       "/images/projects/aleapark/02.png",
       "/images/projects/aleapark/03.png",
       "/images/projects/aleapark/04.png",

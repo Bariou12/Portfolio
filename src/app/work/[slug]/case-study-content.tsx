@@ -371,7 +371,7 @@ function ColorPalette({ colors }: { colors: { name: string; hex: string }[] }) {
                 className="aspect-[3/2] rounded-sm mb-4 border border-white/5 transition-transform duration-500 group-hover:scale-[1.02]"
                 style={{ backgroundColor: c.hex }}
               />
-              <p className="text-sm text-foreground font-medium mb-1">{c.name}</p>
+              {/* <p className="text-sm text-foreground font-medium mb-1">{c.name}</p> */}
               <p className="text-[11px] text-[#6B635A] tracking-[0.1em] uppercase font-mono">
                 {c.hex}
               </p>

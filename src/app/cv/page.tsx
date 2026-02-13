@@ -64,7 +64,7 @@ const experience = [
 const education = [
   {
     degree: "Licence Professionnelle — Design UX/UI",
-    school: "École / Établissement",
+    school: "AFRICA DESIGN SCHOOL",
     period: "2021 — 2024",
   },
 ];
@@ -158,7 +158,7 @@ export default function CVPage() {
                 custom={4}
                 className="text-right text-[#6B635A] text-xs leading-[2] tracking-wide"
               >
-                <p>Paris, France</p>
+                <p>Lomé, TOGO</p>
                 <p>bariouboussari@gmail.com</p>
                 <p>linkedin.com/in/bariou-boussari</p>
                 <p>behance.net/bariouboussari</p>
@@ -324,7 +324,7 @@ export default function CVPage() {
                   <div className="h-[1px] bg-[rgba(196,169,125,0.04)]" />
                   <div className="flex items-center justify-between">
                     <span className="text-foreground text-sm">Anglais</span>
-                    <span className="text-[#6B635A] text-xs">Professionnel</span>
+                    <span className="text-[#6B635A] text-xs">Intermédiaire</span>
                   </div>
                 </div>
               </motion.section>
