@@ -107,11 +107,6 @@ function FullBleedImage({ src, alt, caption }: { src: string; alt: string; capti
           </motion.div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/30 via-transparent to-[#080808]/10" />
         </div>
-        {caption && (
-          <p className="text-[11px] text-[#6B635A] tracking-[0.15em] uppercase mt-4 text-center">
-            {caption}
-          </p>
-        )}
       </div>
     </div>
   );
@@ -156,9 +151,15 @@ function BrowserMockup({ src, alt }: { src: string; alt: string }) {
 }
 
 /* ── Phone mockup frame ── */
-function PhoneMockup({ src, alt }: { src: string; alt: string }) {
+function PhoneMockup({ src, alt, project }: { src: string; alt: string; project?: Project }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
+  
+  // Hide PhoneMockup for the 'toju' project
+  if (project?.slug === 'toju') {
+    return null;
+  }
+  
   return (
     <motion.div
       ref={ref}
@@ -538,7 +539,7 @@ export function CaseStudyContent({
       { after: 0, element: <FullBleedImage key="fb1" src={g[1]} alt={`${project.title} — Vue d'ensemble`} caption="Vue d'ensemble et contexte" /> },
       { after: 1, element: (
           <div key="phone-focus" className="py-12 md:py-20 relative overflow-hidden">
-             <PhoneMockup src={g[2]} alt={`${project.title} — Interface Mobile`} />
+             <PhoneMockup src={g[2]} alt={`${project.title} — Interface Mobile`} project={project} />
           </div>
         ) 
       },
@@ -571,7 +572,7 @@ export function CaseStudyContent({
           <FloatingElement className="absolute top-10 left-[10%] w-[150px] h-[150px] hidden lg:block" speed={15}>
             <AbstractBlob variant={1} className="w-full h-full opacity-20" />
           </FloatingElement>
-          <PhoneMockup src={g[10]} alt={`${project.title} — Mobile`} />
+          <PhoneMockup src={g[10]} alt={`${project.title} — Mobile`} project={project} />
         </div>
       ),
     });

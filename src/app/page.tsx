@@ -181,14 +181,7 @@ function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ delay: 2, duration: 1 }}
         >
-          <motion.div
-            className="w-[1px] h-16 bg-gradient-to-b from-[#C4A97D]/50 to-transparent origin-top"
-            animate={{ scaleY: [0, 1, 0] }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-          />
-            <span className="text-[10px] text-[#6B635A] tracking-[0.3em] uppercase">
-              Défiler
-            </span>
+          
         </motion.div>
       </motion.div>
     </section>
