@@ -251,7 +251,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
             src={project.thumbnail}
             alt={project.title}
             fill
-            className="object-cover project-img transition-transform duration-700 group-hover:scale-105"
+            className="object-cover project-img transition-transform duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/90 via-[#080808]/30 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
 

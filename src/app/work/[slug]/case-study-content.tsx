@@ -492,7 +492,7 @@ export function CaseStudyContent({
     { after: 0, element: <FullBleedImage key="fb1" src={g[1]} alt={`${project.title} — Vue d'ensemble`} caption="Vue d'ensemble du projet" /> },
     { after: 1, element: <BrowserMockup key="bm1" src={g[2]} alt={`${project.title} — Desktop`} /> },
     { after: 2, element: <DuoImages key="duo1" images={[g[3], g[4]]} alts={[`${project.title} — Detail 1`, `${project.title} — Detail 2`]} /> },
-    { after: 3, element: <DeviceDuo key="dd1" desktopSrc={g[2]} mobileSrc={g[5]} alt={project.title} /> },
+    { after: 3, element: <DeviceDuo key="dd1" desktopSrc={g[5]} mobileSrc={g[6]} alt={project.title} /> },
   ];
 
   // After tools/colors: trio + phone mockup between remaining sections
@@ -500,7 +500,7 @@ export function CaseStudyContent({
   if (sections.length > 5) {
     lateVisuals.push({
       after: 0,
-      element: <TrioImages key="trio1" images={[g[0], g[3], g[5]]} alts={[`${project.title} — Composition 1`, `${project.title} — Composition 2`, `${project.title} — Composition 3`]} />,
+      element: <TrioImages key="trio1" images={[g[7], g[8], g[9]]} alts={[`${project.title} — Composition 1`, `${project.title} — Composition 2`, `${project.title} — Composition 3`]} />,
     });
   }
   if (sections.length > 6) {
@@ -511,7 +511,7 @@ export function CaseStudyContent({
           <FloatingElement className="absolute top-10 left-[10%] w-[150px] h-[150px] hidden lg:block" speed={15}>
             <AbstractBlob variant={1} className="w-full h-full opacity-20" />
           </FloatingElement>
-          <PhoneMockup src={g[4]} alt={`${project.title} — Mobile`} />
+          <PhoneMockup src={g[10]} alt={`${project.title} — Mobile`} />
         </div>
       ),
     });
@@ -675,7 +675,7 @@ export function CaseStudyContent({
         <div className="max-w-[1600px] mx-auto px-4 md:px-8">
           <AnimSection>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-              {g.map((src, i) => (
+              {g.slice(11).map((src, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
