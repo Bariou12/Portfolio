@@ -270,9 +270,9 @@ export const projects: Project[] = [
     type: "UX / Product",
       sector: "Événementiel · Mariage",
       tags: ["UX", "UI", "Product"],
-      year: "2025–2026",
-    role: "UX/UI Designer · Product Designer",
-    scope: "UX · UI · Prototype",
+      year: "2025",
+      role: "UX/UI Designer · Product Designer",
+      scope: "UX · UI · Prototype",
       description:
         "On Se Dit Oui est une plateforme B2C dédiée à l'organisation du mariage. Le vrai défi était de concevoir un produit complexe — site builder, gestion des invités, RSVP, dashboard — accessible à des utilisateurs non-techniques, sans dénaturer l'émotion du moment.",
       vision:
