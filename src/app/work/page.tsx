@@ -87,7 +87,7 @@ export default function WorkPage() {
   const [active, setActive] = useState("All");
 
   const filtered =
-    active === "All"
+    active === "Tous"
       ? projects
       : projects.filter((p) => p.tags.includes(active));
 
