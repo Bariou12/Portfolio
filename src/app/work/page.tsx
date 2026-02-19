@@ -84,7 +84,7 @@ function ProjectItem({ project, index }: { project: typeof projects[0]; index: n
 }
 
 export default function WorkPage() {
-  const [active, setActive] = useState("All");
+  const [active, setActive] = useState("Tous");
 
   const filtered =
     active === "Tous"
