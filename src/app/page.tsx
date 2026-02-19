@@ -237,7 +237,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
       transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: (index % 2) * 0.15 }}
     >
-      <Link href={`/work/${project.slug}`} className="group block project-card" data-cursor="View">
+      <Link href={`/work/${project.slug}`} className="group block project-card" data-cursor="Voir">
         {/* Image */}
         <div className="relative overflow-hidden bg-[#111110] aspect-[4/3] rounded-sm">
           <Image
