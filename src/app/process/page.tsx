@@ -67,16 +67,16 @@ export default function ProcessPage() {
           <div className="max-w-[1400px] mx-auto px-6 md:px-10">
             {/* Header */}
             <div className="mb-24 md:mb-36 relative">
-              <MaskReveal>
-                <span className="text-[#C4A97D] text-xs tracking-[0.35em] uppercase font-medium">
-                  Méthodologie
-                </span>
-              </MaskReveal>
-              <div className="mt-4 mb-8">
-                <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-foreground leading-[0.9]">
-                    <SplitText type="words" stagger={0.06}>Méthodologie</SplitText>
-                </h1>
-              </div>
+                <MaskReveal>
+                  <span className="text-[#C4A97D] text-xs tracking-[0.35em] uppercase font-medium">
+                    Processus
+                  </span>
+                </MaskReveal>
+                <div className="mt-4 mb-8">
+                  <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-foreground leading-[1] pb-[0.1em]">
+                      <SplitText type="words" stagger={0.06}>Méthodologie</SplitText>
+                  </h1>
+                </div>
               <MaskReveal delay={0.3}>
                 <p className="text-[#6B635A] max-w-xl text-lg leading-relaxed">
                     Cinq phases, chacune avec une intention précise. L'approche s'adapte au projet — la logique, jamais.
