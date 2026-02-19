@@ -1068,7 +1068,7 @@ export const projects: Project[] = [
         type: "UX / UI",
         sector: "Infrastructures · Institutionnel · Numérique",
         tags: ["UX", "UI", "Web"],
-        year: "2024",
+          year: "2025",
         role: "UX/UI Designer",
         scope: "UX · UI · Web · Prototype",
           description:
