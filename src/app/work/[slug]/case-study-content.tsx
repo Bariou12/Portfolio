@@ -281,9 +281,9 @@ function DuoPhones({ leftSrc, rightSrc, alt }: { leftSrc: string; rightSrc: stri
              </div>
           </div>
         </div>
-        <p className="text-[11px] text-[#6B635A] tracking-[0.15em] uppercase mt-12 text-center">
-          Mobile interface design
-        </p>
+          <p className="text-[11px] text-[#6B635A] tracking-[0.15em] uppercase mt-12 text-center">
+            Interfaces mobiles
+          </p>
       </div>
     </motion.div>
   );
