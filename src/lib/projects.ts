@@ -514,10 +514,10 @@ export const projects: Project[] = [
     ],
     tools: ["Figma", "FigJam", "Notion", "Miro", "After Effects"],
     metrics: [
-      { label: "Type de projet", value: "Client" },
-      { label: "Secteur", value: "Digital/IA" },
-      { label: "Année", value: "24–25" },
-      { label: "Rôle", value: "UX/UI" },
+        { label: "Type de projet", value: "Client" },
+        { label: "Secteur", value: "Digital/IA" },
+        { label: "Année", value: "25–26" },
+        { label: "Rôle", value: "UX/UI" },
     ],
     sections: [
       {
