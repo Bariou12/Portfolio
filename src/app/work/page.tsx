@@ -18,7 +18,7 @@ import {
   FloatingElement,
   AbstractBlob,
   DotsPattern,
-  WireframeGrid,
+  ProcessFlowDiagram,
 } from "@/components/visuals";
 
 const filters = ["Tous", "UX", "UI", "Web", "Produit"];
