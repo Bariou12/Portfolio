@@ -175,7 +175,7 @@ export default function WorkPage() {
                     <ProjectItem key={project.slug} project={project} index={i} />
                   ))}
                   {/* Carte "À venir" — visible uniquement sur le filtre All */}
-                  {active === "All" && (
+                    {active === "Tous" && (
                     <motion.div
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
