@@ -1103,160 +1103,145 @@ export const projects: Project[] = [
       { name: "Glass Grey", hex: "#04585D" },
     ],
     tools: ["Figma", "FigJam", "Notion", "After Effects"],
-    metrics: [
-      { label: "Type de projet", value: "Client" },
-      { label: "Mission", value: "Création" },
-      { label: "Année", value: "2024" },
-      { label: "Rôle", value: "UX/UI" },
-    ],
-      sections: [
+      metrics: [
+        { label: "Client", value: "SIN" },
+        { label: "Création", value: "2024" },
+        { label: "Rôle", value: "UX/UI" },
+        { label: "Périmètre", value: "Web" },
+      ],
+        sections: [
+            {
+              num: "01",
+              title: "Contexte",
+              content:
+                "La SIN est un acteur stratégique de l'écosystème numérique togolais. Son site devait refléter son rôle institutionnel, clarifier ses missions auprès des partenaires publics et privés, valoriser les infrastructures nationales et inspirer confiance et crédibilité.",
+              bullets: [
+                "Refléter son rôle institutionnel",
+                "Clarifier ses missions auprès des partenaires publics et privés",
+                "Valoriser les infrastructures nationales",
+                "Inspirer confiance et crédibilité",
+              ],
+              quote:
+                "L'enjeu principal : transformer un discours technique et réglementaire en une expérience structurée, accessible et impactante.",
+            },
           {
             num: "02",
-            title: "Contexte & enjeux",
+            title: "Mission & problématique",
             content:
-              "SIN existait déjà — avec une identité visuelle forte et une présence en ligne. Mais cette présence restait incomplète : pas de site web fonctionnel capable de représenter réellement la marque. Le défi n'était pas de tout créer, mais de ne pas trahir ce qui existait déjà :",
-            bullets: [
-              "Prendre en compte une identité existante sans la réinterpréter librement",
-              "Construire une expérience web cohérente avec le positionnement de la marque",
-              "Concevoir un site fonctionnel et crédible, à la hauteur de l'image déjà établie",
-            ],
+              "Comment traduire la souveraineté numérique d'un pays en une expérience digitale claire et contemporaine ?",
             subsections: [
               {
-                title: "Enjeux principaux",
+                title: "Les défis",
                 bullets: [
-                  "Traduire une identité visuelle forte en expérience digitale navigable",
-                  "Éviter un résultat générique qui effacerait la singularité de la marque",
-                  "Assurer lisibilité et fluidité sans sacrifier le positionnement premium",
-                  "Construire un site évolutif, capable d'accompagner la croissance de SIN",
+                  "Hiérarchiser une grande quantité d'informations institutionnelles",
+                  "Simplifier le vocabulaire technique",
+                  "Moderniser l'image sans perdre la posture institutionnelle",
+                  "Créer une navigation fluide malgré la densité de contenu",
                 ],
               },
             ],
-            quote:
-              "L'enjeu n'était pas de créer une identité — c'était d'en être à la hauteur.",
           },
-        {
-          num: "03",
-          title: "Mon rôle & responsabilités",
-          content:
-            "Sur SIN, j'ai pris en charge l'intégralité de la conception du site, en partant de l'identité existante comme cadre de référence.",
+          {
+            num: "03",
+            title: "Approche UX",
+            content:
+              "J'ai structuré le projet autour de trois piliers :",
+            subsections: [
+              {
+                title: "1. Clarification stratégique",
+                content:
+                  "Repenser l'architecture de l'information pour prioriser les messages clés : mission, infrastructures, services.",
+              },
+              {
+                title: "2. Hiérarchisation visuelle",
+                content:
+                  "Utilisation d'une grille rigoureuse, contrastes forts et respiration maîtrisée pour guider la lecture.",
+              },
+              {
+                title: "3. Crédibilité institutionnelle",
+                content:
+                  "Palette sobre, typographies élégantes, imagerie technologique forte.",
+              },
+            ],
+          },
+          {
+            num: "04",
+            title: "Direction artistique",
+            content:
+              "L'univers visuel repose sur :",
             bullets: [
-              "Analyse de l'identité visuelle et de la présence existante pour définir les contraintes de conception",
-              "Définition de l'architecture de l'information et de la vision UX",
-              "Design UI complet — composants, typographie, rythme visuel en cohérence avec la marque",
-              "Conception du prototype interactif et validation des transitions",
+              "Un fond sombre profond pour renforcer la dimension stratégique",
+              "Des touches de vert pour symboliser croissance et innovation",
+              "Des visuels technologiques immersifs — data centers, réseaux, cartographies",
+              "Une typographie élégante et institutionnelle",
             ],
             quote:
-              "Travailler avec une identité existante, c'est accepter des contraintes fortes — et les transformer en leviers de cohérence.",
-        },
-        {
-          num: "04",
-          title: "Démarche UX",
-          content: "",
-          subsections: [
-              {
-                title: "1. Analyse de l'existant",
-                content:
-                  "Avant de concevoir quoi que ce soit, j'ai pris le temps d'analyser l'identité de SIN : sa charte graphique, son ton, sa présence en ligne. L'objectif était de comprendre ce qui faisait la singularité de la marque pour que chaque décision UI en soit le prolongement naturel.",
-              },
-            {
-              title: "2. Définition des besoins utilisateurs",
-              content:
-                "Même sans données existantes, des attentes structurelles ont guidé la conception :",
-              bullets: [
-                "Identifier l'univers de SIN en quelques secondes",
-                "Comprendre la proposition de valeur sans effort de lecture",
-                "Explorer le contenu sans friction ni surcharge",
-                "Ressentir une cohérence entre le fond et la forme",
-              ],
-            },
-            {
-              title: "3. Architecture de l'information",
-              content:
-                "L'architecture a été construite pour éviter la surcharge, favoriser une lecture fluide et créer un rythme visuel maîtrisé. Chaque section répond à un objectif narratif précis, sans redondance.",
-            },
-          ],
-        },
-        {
-          num: "05",
-          title: "Direction UI & intentions visuelles",
-          content: "",
-          subsections: [
-            {
-              title: "Intention globale",
-              content: "L'interface devait refléter :",
-              bullets: [
-                "Une identité forte et affirmée",
-                "Une radicalité graphique assumée",
-                "Une approche éditoriale — chaque section comme un chapitre",
-              ],
-            },
-            {
-              title: "Principes UI",
-              bullets: [
-                "Composition sobre mais expressive",
-                "Hiérarchie typographique clairement marquée",
-                "Contrastes maîtrisés pour guider le regard",
-                "Respirations visuelles pour équilibrer densité et impact",
-              ],
-            },
-          ],
-          quote:
-            "Le design ne séduit pas par accumulation — il convainc par la justesse et la cohérence des choix.",
-        },
-        {
-          num: "06",
-          title: "Écrans & moments clés",
-          content: "",
-          subsections: [
-            {
-              title: "Hero section",
-              content:
-                "Message direct, forte présence typographique. L'univers de SIN est établi en quelques secondes.",
-            },
-            {
-              title: "Sections de contenu",
-              content:
-                "Chaque section fonctionne comme un chapitre : intention claire, rythme maîtrisé, continuité visuelle forte. Pas de section décorative.",
-            },
-            {
-              title: "Prototype",
-              content:
-                "Le prototype valide les enchaînements, les transitions et la cohérence globale du parcours — au-delà des maquettes statiques.",
-            },
-          ],
-        },
-        {
-          num: "07",
-          title: "Valeur apportée",
-          content: "",
-          subsections: [
-            {
-              title: "Pour le client",
-              bullets: [
-                "Une fondation digitale solide et immédiatement crédible",
-                "Une identité claire et différenciante sur un marché concurrentiel",
-                "Un site construit pour évoluer sans refonte structurelle",
-              ],
-            },
-            {
-              title: "Pour l'utilisateur",
-              bullets: [
-                "Une lecture claire du message et de la proposition de valeur",
-                "Une navigation fluide sans friction cognitive",
-                "Une immersion cohérente dans l'univers de SIN",
-              ],
-            },
-          ],
-        },
-        {
-          num: "08",
-          title: "Learnings & recul de designer",
-          content:
-                "SIN m'a appris que travailler avec une identité existante est aussi exigeant que partir de zéro — les contraintes sont différentes, mais la rigueur reste la même. Chaque décision devait être cohérente avec ce qui existait, tout en apportant quelque chose de nouveau.",
-              quote:
-                "Contraindre n'est pas limiter. C'est souvent ce qui oblige à être juste plutôt que simplement inventif.",
+              "Créer un équilibre entre autorité publique et modernité digitale.",
           },
-        ],
+          {
+            num: "05",
+            title: "Expérience utilisateur",
+            content:
+              "L'expérience a été pensée pour :",
+            bullets: [
+              "Faciliter l'accès aux informations réglementaires",
+              "Structurer les contenus longs en blocs digestes",
+              "Mettre en avant les infrastructures stratégiques",
+              "Offrir une lecture fluide sur desktop et mobile",
+            ],
+            quote:
+              "Chaque section a été conçue pour guider progressivement l'utilisateur, du contexte institutionnel vers la compréhension opérationnelle.",
+          },
+          {
+            num: "06",
+            title: "Interfaces clés",
+            content: "",
+            subsections: [
+              {
+                title: "Page d'accueil",
+                content:
+                  "Positionnement stratégique clair, mise en avant des infrastructures et des missions.",
+              },
+              {
+                title: "Page À propos",
+                content:
+                  "Narration institutionnelle structurée et accessible.",
+              },
+              {
+                title: "Pages Infrastructures",
+                content:
+                  "Valorisation visuelle des équipements critiques.",
+              },
+              {
+                title: "Responsive",
+                content:
+                  "Optimisation mobile pour une consultation simplifiée des contenus.",
+              },
+            ],
+          },
+          {
+            num: "07",
+            title: "Résultat & impact",
+            content:
+              "Un site institutionnel modernisé qui :",
+            bullets: [
+              "Renforce la crédibilité digitale de la SIN",
+              "Clarifie son rôle stratégique",
+              "Valorise les infrastructures nationales",
+              "Améliore la lisibilité des contenus réglementaires",
+            ],
+            quote:
+              "Construire l'infrastructure numérique d'un pays commence aussi par une interface claire.",
+          },
+          {
+            num: "08",
+            title: "Learnings & recul de designer",
+            content:
+                  "Ce projet m'a rappelé qu'un site institutionnel n'est pas un document — c'est une prise de position. Chaque choix typographique, chaque hiérarchie visuelle, chaque respiration contribue à transmettre ou à trahir la posture de l'organisation.",
+                quote:
+                  "La crédibilité ne se déclare pas. Elle se perçoit — dans chaque détail de l'interface.",
+            },
+          ],
       url: "https://sin.maono.design",
       urlLabel: "Visiter le site",
       },
