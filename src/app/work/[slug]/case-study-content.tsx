@@ -168,9 +168,9 @@ function PhoneMockup({ src, alt }: { src: string; alt: string }) {
           <Image src={src} alt={alt} fill className="object-cover object-top" sizes="320px" />
         </div>
       </div>
-      <p className="text-[11px] text-[#6B635A] tracking-[0.15em] uppercase mt-6 text-center">
-        Mobile experience
-      </p>
+        <p className="text-[11px] text-[#6B635A] tracking-[0.15em] uppercase mt-6 text-center">
+          Expérience mobile
+        </p>
     </motion.div>
   );
 }
