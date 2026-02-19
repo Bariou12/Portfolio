@@ -21,7 +21,7 @@ import {
   WireframeGrid,
 } from "@/components/visuals";
 
-const filters = ["All", "UX", "UI", "Web", "Product"];
+const filters = ["Tous", "UX", "UI", "Web", "Produit"];
 
 function ProjectItem({ project, index }: { project: typeof projects[0]; index: number }) {
   const ref = useRef(null);
