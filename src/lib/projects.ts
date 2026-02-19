@@ -685,10 +685,10 @@ export const projects: Project[] = [
     ],
     tools: ["Figma", "FigJam", "Notion", "Miro"],
     metrics: [
-      { label: "Type de projet", value: "Site web" },
-      { label: "Secteur", value: "Sport" },
-      { label: "Année", value: "2024" },
-      { label: "Rôle", value: "UX/UI" },
+        { label: "Type de projet", value: "Site web" },
+        { label: "Secteur", value: "Sport" },
+        { label: "Année", value: "2025" },
+        { label: "Rôle", value: "UX/UI" },
     ],
       sections: [
         {
