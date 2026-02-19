@@ -114,9 +114,9 @@ export default function WorkPage() {
                 </span>
               </MaskReveal>
               <div className="mt-4 mb-6">
-                <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-foreground leading-[0.9]">
-                  <SplitText type="words" stagger={0.06}>Work</SplitText>
-                </h1>
+                  <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-foreground leading-[0.9]">
+                    <SplitText type="words" stagger={0.06}>Projets</SplitText>
+                  </h1>
               </div>
               <MaskReveal delay={0.3}>
                 <p className="text-[#6B635A] max-w-lg text-lg leading-relaxed">
