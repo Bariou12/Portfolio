@@ -218,10 +218,10 @@ export default function WorkPage() {
                 </motion.div>
               </AnimatePresence>
 
-            {/* Bottom wireframe decoration */}
-            <div className="mt-24 md:mt-36 max-w-[400px] mx-auto opacity-30">
-              <WireframeGrid />
-            </div>
+              {/* Bottom flow diagram */}
+              <div className="mt-24 md:mt-36">
+                <ProcessFlowDiagram />
+              </div>
           </div>
         </section>
       </div>
