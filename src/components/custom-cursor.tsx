@@ -84,7 +84,7 @@ export function CustomCursor() {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.5 }}
-                className="text-[10px] text-white tracking-[0.15em] uppercase font-medium"
+                className="text-[10px] text-white tracking-[0.15em] uppercase font-medium text-center whitespace-nowrap"
               >
                 {label}
               </motion.span>
