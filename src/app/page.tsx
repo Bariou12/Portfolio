@@ -470,9 +470,9 @@ function StrengthsSection() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 pt-32 md:pt-48">
         <div className="text-center mb-20 md:mb-28">
           <MaskReveal>
-            <span className="text-[#C4A97D] text-xs tracking-[0.35em] uppercase font-medium">
-                Why me
-              </span>
+              <span className="text-[#C4A97D] text-xs tracking-[0.35em] uppercase font-medium">
+                  Atouts
+                </span>
             </MaskReveal>
             <div className="mt-4">
               <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl text-foreground leading-[0.95]">
