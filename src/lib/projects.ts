@@ -906,10 +906,10 @@ export const projects: Project[] = [
     ],
     tools: ["Figma", "FigJam", "Miro", "Notion"],
     metrics: [
-      { label: "Type de projet", value: "Client" },
-      { label: "Secteur", value: "Tech" },
-      { label: "Année", value: "2024" },
-      { label: "Rôle", value: "UX/UI" },
+        { label: "Type de projet", value: "Client" },
+        { label: "Secteur", value: "Tech" },
+        { label: "Année", value: "2025" },
+        { label: "Rôle", value: "UX/UI" },
     ],
     sections: [
       {
