@@ -54,7 +54,7 @@ function ProjectItem({ project, index }: { project: typeof projects[0]; index: n
 
           {/* View indicator */}
           <div className="absolute bottom-5 right-5 flex items-center gap-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-            <span className="text-[10px] text-white/50 tracking-[0.2em] uppercase">View</span>
+              <span className="text-[10px] text-white/50 tracking-[0.2em] uppercase">Voir</span>
             <div className="w-7 h-7 rounded-full border border-[#C4A97D]/30 flex items-center justify-center group-hover:bg-[#C4A97D]/10 transition-colors duration-300">
               <ArrowUpRight size={11} className="text-[#C4A97D]" />
             </div>
