@@ -313,7 +313,7 @@ function DeviceDuo({ desktopSrc, mobileSrc, alt }: { desktopSrc: string; mobileS
               </div>
               <div className="flex-1 flex justify-center">
                 <div className="bg-[#0E0D0C] rounded-md px-12 py-1">
-                  <span className="text-[10px] text-[#6B635A] tracking-wider">desktop</span>
+                    <span className="text-[10px] text-[#6B635A] tracking-wider">bureau</span>
                 </div>
               </div>
             </div>
