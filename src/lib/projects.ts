@@ -1063,18 +1063,18 @@ export const projects: Project[] = [
   // 6. SIN
   {
     slug: "sin",
-    title: "SIN",
-      subtitle: "Conception du site web pour une marque à l'identité établie",
-      type: "UX / UI",
-      sector: "Digital · Web · Branding",
-      tags: ["UX", "UI", "Web"],
-      year: "2025",
-      role: "UX/UI Designer",
-      scope: "UX · UI · Web · Prototype",
-        description:
-          "SIN disposait déjà d'une identité visuelle affirmée et d'une présence en ligne, mais sans site web réellement fonctionnel. L'enjeu était de traduire cette identité en une expérience digitale cohérente, navigable et crédible — sans trahir l'univers existant ni le diluer.",
-        vision:
-          "Quand l'identité existe déjà, le rôle du designer est de lui donner une forme digitale à la hauteur de ce qu'elle représente.",
+      title: "SIN",
+        subtitle: "Société d'Infrastructures Numériques",
+        type: "UX / UI",
+        sector: "Infrastructures · Institutionnel · Numérique",
+        tags: ["UX", "UI", "Web"],
+        year: "2024",
+        role: "UX/UI Designer",
+        scope: "UX · UI · Web · Prototype",
+          description:
+            "La SIN pilote le développement des infrastructures numériques stratégiques du Togo : fibre optique nationale, data centers, interconnexions internationales. J'ai conçu une expérience digitale institutionnelle capable de traduire la souveraineté numérique du pays en une interface claire, moderne et crédible.",
+          vision:
+            "Créer une plateforme digitale à la hauteur des ambitions numériques nationales, alliant clarté, autorité et modernité.",
     thumbnail:
       "/images/projects/sin/01.png",
     gallery: [
