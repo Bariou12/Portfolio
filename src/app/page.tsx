@@ -322,8 +322,8 @@ function SelectedWork() {
                 href="/work"
                 className="hidden sm:inline-flex items-center gap-3 text-sm text-[#6B635A] hover:text-[#C4A97D] transition-colors duration-500 tracking-[0.12em] uppercase link-underline"
               >
-                  All projects
-                  <ArrowUpRight size={14} />
+                  Tous les projets
+                    <ArrowUpRight size={14} />
                 </Link>
               </Magnetic>
             </Reveal>
