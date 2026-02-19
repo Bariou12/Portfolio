@@ -1104,10 +1104,10 @@ export const projects: Project[] = [
     ],
     tools: ["Figma", "FigJam", "Notion", "After Effects"],
       metrics: [
-        { label: "Client", value: "SIN" },
-        { label: "Création", value: "2024" },
-        { label: "Rôle", value: "UX/UI" },
-        { label: "Périmètre", value: "Web" },
+          { label: "Client", value: "SIN" },
+          { label: "Création", value: "2025" },
+          { label: "Rôle", value: "UX/UI" },
+          { label: "Périmètre", value: "Web" },
       ],
         sections: [
             {
