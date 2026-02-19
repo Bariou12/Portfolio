@@ -136,9 +136,9 @@ function BrowserMockup({ src, alt }: { src: string; alt: string }) {
             </div>
             <div className="flex-1 flex justify-center">
               <div className="bg-[#0E0D0C] rounded-md px-16 py-1.5">
-                <span className="text-[10px] text-[#6B635A] tracking-wider">
-                  design preview
-                </span>
+                  <span className="text-[10px] text-[#6B635A] tracking-wider">
+                    aperçu design
+                  </span>
               </div>
             </div>
           </div>
