@@ -154,7 +154,7 @@ export default function WorkPage() {
                   </button>
                 ))}
                 <span className="text-[10px] text-[#6B635A]/40 tracking-wider self-center ml-2">
-                  {filtered.length} project{filtered.length !== 1 ? "s" : ""}
+                  {filtered.length} projet{filtered.length !== 1 ? "s" : ""}
                 </span>
               </div>
             </MaskReveal>
